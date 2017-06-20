@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>This is going to work !</title>
+  </head>
+  <body>
+    <ul id="mainUl">
+      {{#users}}
+      <li class="listItems">
+        <img class="imgs" src="{{avatar}}">
+        <p class="userName">{{username}}</p>
+        <p class="name">{{name}}</p>
+        <p class="email">{{email}}</p>
+        <p class>{{university}}</p>
+
+      </li>
+      {{/users}}
+    </ul>
+  </body>
+</html>
