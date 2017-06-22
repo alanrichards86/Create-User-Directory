@@ -5,7 +5,30 @@
   justify-content: space-around;
 }
 .listItems {
-  border: 1px solid grey;
+  border: 1px solid lightblue;
   margin: 8px;
   list-style: none;
+  width: 20vw;
+}
+.hireMe {
+  color: red;
+  font-size: 1.2em;
+}
+#mainDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+.divHead {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+}
+.educationDiv {
+  display: flex;
+  width: 30vw;
+  border: 1px solid black;
+}
+.uniImgs {
+  border: .5px solid black;
+  border-radius: 5em;
 }

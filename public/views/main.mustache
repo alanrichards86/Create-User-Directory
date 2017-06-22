@@ -13,10 +13,33 @@
         <p class="userName">{{username}}</p>
         <p class="name">{{name}}</p>
         <p class="email">{{email}}</p>
-        <p class>{{university}}</p>
-
+        <!-- {{#university}}
+        <p class="education">{{university}}</p>
+        {{/university}}
+        {{^university}}
+        <br>
+        {{/university}} -->
+        {{#job}}
+        <p class="jobs">{{job}}</p>
+        {{/job}}
+        {{^job}}
+        <p class="hireMe">Available for Hire!</p>
+        {{/job}}
       </li>
       {{/users}}
     </ul>
+    <section>
+    <div id="mainDiv">
+      <h2 class="divHead">People With Former Education</h2>
+      {{#users}}
+      {{#university}}
+      <div class="educationDiv">
+      <img  class="uniImgs" src="{{avatar}}">
+      <h2>{{name}}</h2>
+      </div>
+      {{/university}}
+      {{/users}}
+    </div>
+    </section>
   </body>
 </html>
