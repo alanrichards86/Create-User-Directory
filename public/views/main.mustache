@@ -29,13 +29,16 @@
       {{/users}}
     </ul>
     <section>
-    <div id="mainDiv">
+    <div id="uniDiv1">
       <h2 class="divHead">People With Former Education</h2>
       {{#users}}
       {{#university}}
       <div class="educationDiv">
-      <img  class="uniImgs" src="{{avatar}}">
-      <h2>{{name}}</h2>
+        <img  class="uniImgs" src="{{avatar}}">
+      </div>
+      <div class="eduNameEmail">
+        <h2>{{name}}</h2>
+        <p>{{email}}</p>
       </div>
       {{/university}}
       {{/users}}
