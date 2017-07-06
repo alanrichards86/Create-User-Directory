@@ -15,11 +15,28 @@ app.get('/users', function (req, res){
   res.render('main', {users: proDocs});
 });
 
+app.get('unemployed', function(req, res){
+  res.render('unemployed');
+});
+
 var proDocs;
 
 var findDocuments = function(users, callback) {
   // Get the documents collection
   var collection = users.collection('userdata');
+  // Find some documents
+  collection.find({}).toArray(function(err, docs) {
+    assert.equal(err, null);
+    console.log("Found the following records");
+      proDocs = docs;
+    console.log(docs)
+    callback(docs);
+  });
+}
+
+var findUnemployed = function(users, callback) {
+  // Get the documents collection
+  let collection = users.collection('userdata');
   // Find some documents
   collection.find({}).toArray(function(err, docs) {
     assert.equal(err, null);
@@ -47,7 +64,9 @@ MongoClient.connect(url, function(err, db) {
   console.log("Connected successfully to server");
 
 findDocuments(db, function() {
-
+  db.close();
+});
+findUnemployed(db, function(){
   db.close();
 });
 });
