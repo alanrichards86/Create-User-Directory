@@ -6,6 +6,8 @@
     <title>This is going to work !</title>
   </head>
   <body>
+    <a href="./currentlyEmployed"></a>
+    <a href="./lookingForWork">Looking For Work</a>
     <ul id="mainUl">
       {{#users}}
       <li class="listItems">
@@ -28,6 +30,7 @@
       </li>
       {{/users}}
     </ul>
+    {{{yield}}}
     <section>
     <div id="uniDiv1">
       <h2 class="divHead">People With Former Education</h2>
