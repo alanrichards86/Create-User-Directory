@@ -1,0 +1,22 @@
+<ul id="mainUl">
+  {{#users}}
+  <li class="listItems">
+    <img class="imgs" src="{{avatar}}">
+    <p class="userName">{{username}}</p>
+    <p class="name">{{name}}</p>
+    <p class="email">{{email}}</p>
+    {{#university}}
+    <p class="education">{{university}}</p>
+    {{/university}}
+    {{^university}}
+    <br>
+    {{/university}}
+    {{#job}}
+    <p class="jobs">{{job}}</p>
+    {{/job}}
+    {{^job}}
+    <p class="hireMe">Available for Hire!</p>
+    {{/job}}
+  </li>
+  {{/users}}
+</ul>

@@ -1,18 +1,21 @@
-<h1>Page is up and running!</h1>
+<h1>Currently Employed Robots</h1>
 
-<section>
-<div id="uniDiv1">
-  <h2 class="divHead">People With Former Education</h2>
+<ul id="mainUl">
   {{#users}}
-  {{#university}}
-  <div class="educationDiv">
-    <img  class="uniImgs" src="{{avatar}}">
-  </div>
-  <div class="eduNameEmail">
-    <h2>{{name}}</h2>
-    <p>{{email}}</p>
-  </div>
-  {{/university}}
+    {{#job}}
+      <li class="listItems">
+        <img class="imgs" src="{{avatar}}">
+        <p class="userName">{{username}}</p>
+        <p class="name">{{name}}</p>
+        <p class="email">{{email}}</p>
+        {{#university}}
+        <p class="education">{{university}}</p>
+        {{/university}}
+        {{^university}}
+        <br>
+        {{/university}}
+        <p class="jobs">{{job}}</p>
+      </li>
+    {{/job}}
   {{/users}}
-</div>
-</section>
+</ul>

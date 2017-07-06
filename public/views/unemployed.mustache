@@ -1,11 +1,21 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="unemployed">
-    <title>Page 2!</title>
-  </head>
-  <body> -->
-    <h1>Getting it done !</h1>
-  <!-- </body>
-</html> -->
+<h1>Robots Looking for Work</h1>
+
+<ul id="mainUl">
+  {{#users}}
+    {{^job}}
+      <li class="listItems">
+        <img class="imgs" src="{{avatar}}">
+        <p class="userName">{{username}}</p>
+        <p class="name">{{name}}</p>
+        <p class="email">{{email}}</p>
+        {{#university}}
+        <p class="education">{{university}}</p>
+        {{/university}}
+        <!-- {{^university}}
+        <br>
+        {{/university}} -->
+        <p class="hireMe">Available for Hire!</p>
+      </li>
+    {{/job}}
+  {{/users}}
+</ul>

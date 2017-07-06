@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.get('/users', function (req, res){
-  res.render('main', {users: proDocs});
+  res.render('users', {users: proDocs});
 });
 
 
