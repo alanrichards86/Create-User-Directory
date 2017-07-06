@@ -11,7 +11,11 @@ router.get('/users', function (req, res){
 
 
 router.get('/lookingForWork', function(req, res){
-  res.render('unemployed');
+  res.render('unemployed', {users: proDocs});
+});
+
+router.get('/currentlyEmployed', function(req, res){
+  res.render('currentlyEmployed', {users: proDocs});
 });
 
 

@@ -6,8 +6,9 @@
     <title>This is going to work !</title>
   </head>
   <body>
-    <a href="./currentlyEmployed"></a>
+    <a href="./currentlyEmployed">Currently Employed</a>
     <a href="./lookingForWork">Looking For Work</a>
+    <a href="/users">Home</a>
     <ul id="mainUl">
       {{#users}}
       <li class="listItems">
@@ -30,22 +31,8 @@
       </li>
       {{/users}}
     </ul>
+
     {{{yield}}}
-    <section>
-    <div id="uniDiv1">
-      <h2 class="divHead">People With Former Education</h2>
-      {{#users}}
-      {{#university}}
-      <div class="educationDiv">
-        <img  class="uniImgs" src="{{avatar}}">
-      </div>
-      <div class="eduNameEmail">
-        <h2>{{name}}</h2>
-        <p>{{email}}</p>
-      </div>
-      {{/university}}
-      {{/users}}
-    </div>
-    </section>
+
   </body>
 </html>
